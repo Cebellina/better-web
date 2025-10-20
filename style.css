@@ -1,0 +1,117 @@
+/* style.css */        
+
+/* Header */
+header {
+      width: 100%;      
+      background: url('kontor-1.jpg') no-repeat center center/cover;
+      color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+      overflow: hidden; 
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Main */
+main {
+      width: 100%;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Innehåll */
+body {
+      text-align: center;
+      background-color: #f4f6f5;
+      font-family: Arial;
+      font-size: small;
+      color: #454641;
+      padding: auto;
+      text-align: center;
+      max-width: auto;
+}
+
+img.responsive {
+      height: auto;
+      width: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin: 20px; 
+      transition: background-color 0.3s;
+      justify-content: space-evenly;
+      border-radius: 12px;
+}
+
+/* Sektioner och rubriker */
+section {
+      text-align: center;
+      background-color: #f4f6f5;
+      font-family: Arial;
+      font-size: small;
+      color: #454641;
+      max-width: auto;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Formulär */
+form {
+      font-weight: bold;      
+      flex-direction: column;
+      height: 50%;
+      width: 100%;
+      font-size: small;
+      cursor: pointer;
+}
+
+/* Aktiv länk och hover-effekt */         
+      nav a:hover,
+      nav a.active {
+      background-color: #b8bcb8;  
+      text-decoration: none;
+      color: white;
+      border-radius: 60px;
+      padding: 6px 12px;
+      transition: background-color 0s;  
+      display: flex;
+      justify-content: space-around;
+}
+
+/* Navigationsmeny */
+nav a.active {
+      background-color: #70706f;  
+      text-decoration: none;  
+      padding: 6px 12px;      
+      transition: background-color 0.3s;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+nav ul li a { 
+      color: white;
+      background-color: #9c9ca1;    
+      border-radius: 60px;
+      font-weight: bold;      
+      padding: 6px 20px;     
+      transition: background-color 0.3s;      
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+nav ul {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;      
+      transition: background-color 0.3s;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
