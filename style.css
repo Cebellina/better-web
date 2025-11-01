@@ -1,117 +1,188 @@
-/* style.css */        
+/* style.css*/
+
+/* Grundinställningar och variabler */
+:root {
+  --padding: 15px;
+  --primary-color: #454641;
+  --secondary-color: #666;
+  --bg-light: #f4f6f5;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Grundinställningar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: var(--primary-color);
+  line-height: 1.6;
+  padding-top: var(--padding);
+}
 
 /* Header */
 header {
-      width: 100%;      
-      background: url('kontor-1.jpg') no-repeat center center/cover;
-      color: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      border-radius: 12px;
-      overflow: hidden; 
-
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 100%;
+  background: url('images/konferens-6.jpg') no-repeat center center / cover;
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
 }
 
-/* Main */
+/* Navigationsmeny */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f2f2f2;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: var(--primary-color);
+}
+
+/* Huvudinnehåll */
 main {
-      width: 100%;
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 100%;
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  background-color: #fff;
+  margin-bottom: 30px;
 }
 
-/* Innehåll */
-body {
-      text-align: center;
-      background-color: #f4f6f5;
-      font-family: Arial;
-      font-size: small;
-      color: #454641;
-      padding: auto;
-      text-align: center;
-      max-width: auto;
+h2, p, form {
+  padding-bottom: 10px;
+  text-align: center;
 }
 
+/* Bilder */
 img.responsive {
-      height: auto;
-      width: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      margin: 20px; 
-      transition: background-color 0.3s;
-      justify-content: space-evenly;
-      border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
 }
 
-/* Sektioner och rubriker */
+img.responsive:hover {
+  transform: scale(1.03);
+}
+
+/* Sektioner (info.html m.fl.) */
 section {
-      text-align: center;
-      background-color: #f4f6f5;
-      font-family: Arial;
-      font-size: small;
-      color: #454641;
-      max-width: auto;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  background-color: var(--bg-light);
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 /* Formulär */
 form {
-      font-weight: bold;      
-      flex-direction: column;
-      height: 50%;
-      width: 100%;
-      font-size: small;
-      cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-/* Aktiv länk och hover-effekt */         
-      nav a:hover,
-      nav a.active {
-      background-color: #b8bcb8;  
-      text-decoration: none;
-      color: white;
-      border-radius: 60px;
-      padding: 6px 12px;
-      transition: background-color 0s;  
-      display: flex;
-      justify-content: space-around;
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-/* Navigationsmeny */
-nav a.active {
-      background-color: #70706f;  
-      text-decoration: none;  
-      padding: 6px 12px;      
-      transition: background-color 0.3s;
-      display: flex;
-      justify-content: space-around;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(69, 70, 65, 0.3);
 }
 
-nav ul li a { 
-      color: white;
-      background-color: #9c9ca1;    
-      border-radius: 60px;
-      font-weight: bold;      
-      padding: 6px 20px;     
-      transition: background-color 0.3s;      
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
 }
 
-nav ul {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;      
-      transition: background-color 0.3s;
-      display: flex;
-      justify-content: space-around;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+form button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  padding: 15px;
+  line-height: 1.3; /* Mindre radavstånd */
+}
+
+/* Responsiv design */
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  img.responsive {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  header, main, section {
+    padding: 20px;
+  }
 }
