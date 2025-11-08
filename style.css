@@ -1,4 +1,4 @@
-/* style.css*/
+/* style.css */
 
 /* Grundinställningar och variabler */
 :root {
@@ -31,10 +31,10 @@ body {
 header {
   width: 100%;
   background: url('images/konferens-6.jpg') no-repeat center center / cover;
-  color: #413d3ddf; /* Rubrikens färg */
+  color: #413d3ddf;
   text-align: center;
   box-shadow: var(--shadow);
-  padding: 150px; /* Bakgrundsbildens storlek */
+  padding: 150px;
 }
 
 /* Navigationsmeny */
@@ -43,9 +43,9 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
-  background-color: #dddccfb7; /* Bakgrundsfärg */
-  padding: 20px 2px 20px 2px; /* Fyllnad */
-  border-radius: 8px; /* Rundade hörn */
+  background-color: #dddccfb7;
+  padding: 20px 2px;
+  border-radius: 8px;
 }
 
 nav a {
@@ -76,41 +76,13 @@ h2, h3, p {
   margin: 10px 0;
 }
 
-/* Bilder */
-img.responsive {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform var(--transition);
-}
-
-img.responsive:hover {
-  transform: scale(1.03);
-}
-
-/* Sektioner (info.html m.fl.) */
-section {
-  text-align: center;
-  background-color: var(--bg-light);
-  font-size: 0.95rem;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  padding: 20px 200px 20px 200px; 
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
 /* Formulär */
 form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto 30px auto;
   font-size: 0.9rem;
   font-weight: bold;
@@ -149,6 +121,66 @@ form button:hover {
   transform: translateY(-2px);
 }
 
+/* Formulärsektioner */
+.form-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  background-color: var(--bg-light);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.form-section h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.form-section p {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+/* Checkboxar och radioknappar i linje med texten */
+.form-section input[type="checkbox"],
+.form-section input[type="radio"] {
+  vertical-align: middle;
+  margin-right: 6px;
+  transform: translateY(-1px); /* finjustering för perfekt centrering */
+}
+
+.form-section label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 15px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* Kontaktfält i grid-layout */
+.contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-fields label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-fields input {
+  width: 100%;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -156,11 +188,11 @@ footer {
   font-size: 0.85rem;
   padding: 15px;
   line-height: 1.3;
-  background-color: #f1eeee; /* Uppdaterat färg */
+  background-color: #f1eeee;
 }
 
 /* Responsiv design */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   nav {
     flex-direction: column;
     align-items: center;
@@ -173,13 +205,17 @@ footer {
     font-size: 1.1rem;
   }
 
-  img.responsive {
-    max-width: 100%;
-    margin: 10px 0;
-  }
-
   form {
     width: 90%;
+  }
+
+  .form-section label {
+    display: block;
+    margin-right: 0;
+  }
+
+  .contact-fields {
+    grid-template-columns: 1fr;
   }
 
   header, main, section {

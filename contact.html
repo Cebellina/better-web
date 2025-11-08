@@ -15,29 +15,68 @@
       <a href="./contact.html">Kontakt</a>
   </nav>
 </header>
-    <p></p>
+<main>
   <h2>Anmälan</h2>
-    <p>Fyll i formuläret nedan för att anmäla dig.</p>
-    <p>Vänligen bekräfta vilka dagar och vilka seminarier du önskar att delta i.</p> 
-    <p>Det går utmärkt att delta under enstaka dagar eller under hela konferensen.</p>
-    <p>Du betalar självklart bara för de dagar du deltar.</p>
-    <p></p>
+  <p>Fyll i formuläret nedan för att anmäla dig till konferensen <strong>Bättre Webb 2025</strong> i Göteborg.</p>
+  <p>Du kan delta under enstaka dagar eller under hela konferensen (17–19 oktober). Du betalar bara för de dagar du deltar.</p>
+<!-- Formulär -->
 <form>
-  <label for="name">Namn:</label>
+<!-- Kontaktuppgifter -->
+  <h3>Kontaktuppgifter</h3>
+  <div class="contact-fields">
+  <div>
+    <label for="name">Namn:</label>
     <input type="text" id="name" name="name" required minlength="2">
-  <label for="email">E-post:</label>
+  </div>
+  <div>
+    <label for="address">Adress:</label>
+    <input type="text" id="address" name="address" required>
+  </div>
+  <div>
+    <label for="telefonnummer">Telefon:</label>
+    <input type="tel" id="telefonnummer" name="telefonnummer" required pattern="[0-9\s+()-]{6,}">
+  </div>
+  <div>
+    <label for="email">E-post:</label>
     <input type="email" id="email" name="email" required>
-  <label for="message">Önskemål:</label>
-    <textarea id="message" name="message" required></textarea>
+  </div>
+  </div>
+<!-- Val av dagar -->
+  <div class="form-section">
+  <h3>Val av dagar</h3>
+  <p>Konferensen hålls i Göteborg 17–19 oktober. Välj de dagar du vill delta:</p>
+    <label><input type="checkbox" name="days" value="17/10"> 17 oktober</label>
+    <label><input type="checkbox" name="days" value="18/10"> 18 oktober</label>
+    <label><input type="checkbox" name="days" value="19/10"> 19 oktober</label>
+    <label><input type="checkbox" name="days" value="hela"> Hela konferensen</label>
+  </div>
+<!-- Matalternativ -->
+  <div class="form-section">
+  <h3>Matbeställning</h3>
+  <p>Välj ett alternativ:</p>
+    <label><input type="radio" name="mat" value="kött" required> Kött</label>
+    <label><input type="radio" name="mat" value="fisk"> Fisk</label>
+    <label><input type="radio" name="mat" value="vegetarisk"> Vegetarisk</label>
+    <label for="allergier">Allergier*:</label>
+    <input type="text" id="allergier" name="allergier" placeholder="T.ex. nötter, gluten*">
+  </div>
+<!-- Valfritt meddelande -->
+  <div class="form-section">
+  <h3>Meddelande (valfritt)</h3>
+    <textarea id="message" name="message" rows="4" placeholder="Här meddelar ni om ni har några övriga önskemål"></textarea>
+  </div>
 <button type="submit">Skicka anmälan</button>
 </form>
+<section class="contact-info">
   <h3>Kontaktuppgifter</h3>
-    <p>📞 072-445 2070</p>
-    <p>📧 emma.andersson@student.nbi-handelsakademin.se</p>
-  <footer>
-    <p>&copy; 2025 Bättre Webb AB</p>
-    <p>🌐 www.bättrewebb-emma-andersson.se</p>
-    <p>📍 Kungsportsavenyn 12, 411 36 Göteborg</p>
-  </footer>
+  <p>📞 072-445 2070</p>
+  <p>📧 emma.andersson@student.nbi-handelsakademin.se</p>
+</section>
+</main>
+<footer>
+  <p>&copy; 2025 Bättre Webb AB</p>
+  <p>🌐 www.bättrewebb-emma-andersson.se</p>
+  <p>📍 Kungsportsavenyn 12, 411 36 Göteborg</p>
+</footer>
 </body>
 </html>
